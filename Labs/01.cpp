@@ -14,7 +14,7 @@ bool isPrime(int num);
 int main()
 {
     int num;
-    cout << "enter your number: ";
+    cout << "Enter your number: ";
     cin >> num;
 
     if(isPrime(num)==true)
