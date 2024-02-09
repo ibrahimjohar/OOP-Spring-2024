@@ -1,3 +1,8 @@
+/*
+*   Programmer: Ibrahim Johar Farooqi
+*   Date: 9 February 2024
+*/
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -40,26 +45,66 @@ class BoardMarker
     {
         return refillable;
     }
-    bool set_ink()
+    bool get_ink()
     {
         return inkstatus;
     }
 
-    void write()
+    void writemethod()
     {
-        if (inkstatus)
+        if (inkstatus == true)
         {
             cout << "Writing with " << brand << " marker in " << shade << " shade.\n";
         }
         else
         {
-            cout << "Ink is finished. Refill the marker.\n";
+            cout << "Ink is finished. Please refill the marker.\n";
         }
     }
 
-}
+    void refillmethod()
+    {
+        if (refillable == true)
+        {
+            inkstatus = true;
+            cout << "Marker refilled!\n";
+        }
+        else
+        {
+            cout << "This marker is not refillable.\n";
+        }
+    }
+
+};
 
 int main()
 {
+	BoardMarker marker;
+	
+    string brand;
+    string shade;
+	bool refill_status; 
+    bool ink_status;
+	
+    cout << "Enter Brand: ";
+	cin.ignore();
+	getline(cin, brand);
+	cout << "Enter Shade: ";
+	getline(cin, shade);
+	cout << "Enter refill status (true/false): ";
+    cin >> boolalpha >> refill_status;
+    cout << "Enter ink status (true/false): ";
+    cin >> boolalpha >> ink_status;
 
+    marker.set_brand(brand);
+    marker.set_shade(shade);
+    marker.set_refill(refill_status);
+    marker.set_ink(ink_status);
+
+	cout << "Brand: "<< marker.get_brand() << "\n";
+	cout << "Shade: "<< marker.get_shade() << "\n";
+	marker.writemethod();
+    marker.refillmethod(); 
+
+	return 0;
 }
