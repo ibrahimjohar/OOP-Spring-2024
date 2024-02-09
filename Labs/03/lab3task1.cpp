@@ -53,7 +53,7 @@ class BoardMarker
         }
         else
         {
-            cout << "Ink is depleted. Refill the marker.\n";
+            cout << "Ink is finished. Refill the marker.\n";
         }
     }
 
