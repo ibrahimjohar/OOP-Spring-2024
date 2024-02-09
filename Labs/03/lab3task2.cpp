@@ -2,6 +2,10 @@
 #include <string>
 using namespace std;
 
+#include <iostream>
+#include <string>
+using namespace std;
+
 class WaterBottle
 {
 private:
@@ -41,6 +45,18 @@ public:
         color = bottleColor;
     }
 
+    void setCapacityMilliliters(double capacityInMilliliters)
+    {
+        capacityMilliliters = capacityInMilliliters;
+        capacityLiters = capacityMilliliters / 1000.0;
+    }
+
+    void setCapacityLiters(double capacityInLiters)
+    {
+        capacityLiters = capacityInLiters;
+        capacityMilliliters = capacityLiters * 1000.0;
+    }
+
     void updateWaterCapacity(double consumedMilliliters)
     {
         if (consumedMilliliters <= capacityMilliliters)
@@ -54,6 +70,7 @@ public:
         }
     }
 };
+
 
 int main()
 {
