@@ -1,7 +1,18 @@
+/*
+*   Programmer: Ibrahim Johar Farooqi (23K-0074)
+*   Date: 17 March 2024
+*   Description: You have been asked to write a program that calculates the batting average and strike rate for a cricket player. The program should take as input the total number of runs scored by the player 
+*                and the total number of balls faced, and should output the batting average and strike rate. To calculate the batting average, divide the total runs scored by the number of times
+*                the player has been dismissed (i.e., gotten out). To calculate the strike rate, divide the total runs scored by the total number of balls faced and multiply the result by 100.
+*                To implement this program, create an inline function that takes the total number of runs scored and the number of times the player has been dismissed as arguments,
+*                and returns the batting average. Create another inline function that takes the total number of runs scored and the total number of balls faced as arguments, and returns
+*                the strike rate. Demonstrate the functions using main function
+*/
+
 #include <iostream>
 using namespace std;
 
-inline double battingAvg(int totalRuns, int nOuts)
+inline double battingAvg(int totalRuns, int nOuts) //inline function for calculating batting average
 {
     if (nOuts == 0)
     {
@@ -12,7 +23,7 @@ inline double battingAvg(int totalRuns, int nOuts)
     return batAvg;
 }
 
-inline double strikeRate(int totalRuns, int nBalls)
+inline double strikeRate(int totalRuns, int nBalls) //inline function for calculating strikerate
 {
     if (nBalls == 0)
     {
