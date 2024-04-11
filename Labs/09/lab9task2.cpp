@@ -36,19 +36,19 @@ private:
 public:
     Circle(double r) : radius(r), Shape() {}
 
-    double Area() const override
+    double Area() const
     {
         area = M_PI * radius * radius;
         return area;
     }
 
-    double Perimeter() const override
+    double Perimeter() const
     {
         perimeter = 2 * M_PI * radius;
         return perimeter;
     }
 
-    void displayProperties() const override
+    void displayProperties() const
     {
         cout << "Properties of the Circle: \n";
         cout << "Area: " << Area() << "\n";
@@ -66,19 +66,19 @@ private:
 public:
     Rectangle(int l, int w) : length(l), width(w), Shape() {}
 
-    double Area() const override
+    double Area() const
     {
         area = length * width;
         return area;
     }
 
-    double Perimeter() const override
+    double Perimeter() const
     {
         perimeter = 2 * (length + width);
         return perimeter;
     }
 
-    void displayProperties() const override
+    void displayProperties() const
     {
         cout << "Properties of the Rectangle: \n";
         cout << "Area: " << Area() << "\n";
@@ -95,19 +95,19 @@ private:
 public:
     Square(int l) : sidelength(l), Shape() {}
 
-    double Area() const override
+    double Area() const
     {
         area = sidelength * sidelength;
         return area;
     }
 
-    double Perimeter() const override
+    double Perimeter() const
     {
         perimeter = 4 * sidelength;
         return perimeter;
     }
 
-    void displayProperties() const override
+    void displayProperties() const
     {
         cout << "Properties of the Square: \n";
         cout << "Area: " << Area() << "\n";
@@ -124,20 +124,20 @@ protected:
 public:
     Triangle(double s1, double s2, double s3) : side1(s1), side2(s2), side3(s3), Shape() {}
 
-    double Area() const override
+    double Area() const
     {
         double s = (side1 + side2 + side3) / 2;
         area = sqrt(s * (s - side1) * (s - side2) * (s - side3));
         return area;
     }
 
-    double Perimeter() const override
+    double Perimeter() const
     {
         perimeter = side1 + side2 + side3;
         return perimeter;
     }
 
-    void displayProperties() const override
+    void displayProperties() const
     {
         cout << "Properties of the Triangle:\n";
         cout << "Area: " << Area() << "\n";
@@ -153,7 +153,7 @@ private:
 public:
     EquilateralTriangle(double s) : Triangle(s, s, s), side(s) {}
 
-    double Area() const override
+    double Area() const
     {
         //area = (sqrt(3)/4) * (side^2)
         const double constantVal = 0.43301270189; // sqrt(3)/4
@@ -161,12 +161,12 @@ public:
         return area;
     }
 
-    double Perimeter() const override
+    double Perimeter() const
     {
         return 3 * side;
     }
 
-    void displayProperties() const override
+    void displayProperties() const
     {
         cout << "Properties of the Equilateral Triangle:\n";
         cout << "Area: " << Area() << "\n";
