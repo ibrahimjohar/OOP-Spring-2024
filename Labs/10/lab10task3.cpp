@@ -1,3 +1,11 @@
+/*
+*   Programmer: Ibrahim Johar Farooqi (23K-0074)
+*   Date: 18 April 2024
+*   Description: Write a program that will apply the concept of operator overloading on + operator to add the areas of shape1 and shape2.
+*                Name of class is “shape” while shape1 and shape2 are the objects of class shape.
+*                Use the same Area() function for both objects.
+*/
+
 #include <iostream>
 using namespace std;
 
