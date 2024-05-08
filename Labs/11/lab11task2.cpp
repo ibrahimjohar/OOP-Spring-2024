@@ -1,3 +1,11 @@
+/*
+*   Programmer: Ibrahim Johar Farooqi (23K-0074)
+*   Date: 29 April 2024
+*   Description: You need to create a base class called Account that has common attributes and methods for all types of accounts, such as account number, balance, and 
+*                deposit/withdrawal methods. However, the interest calculation and account-specific rules vary depending on the type of account (e.g., savings, current, credit).
+*                Create an abstract class Account with pure virtual functions for interest calculation and account-specific rules, and then create concrete subclasses for each type of account.
+*/
+
 #include <iostream>
 using namespace std;
 
