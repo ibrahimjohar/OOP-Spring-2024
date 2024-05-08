@@ -1,3 +1,12 @@
+/*
+*   Programmer: Ibrahim Johar Farooqi (23K-0074)
+*   Date: 29 April 2024
+*   Description: You are working on a project that involves managing different types of vehicles, such as cars, trucks, and motorcycles.
+*                You need to create a base class called Vehicle that has common attributes and methods, such as make, model, and speed.
+*                However, the specific features and behaviors vary depending on the type of vehicle (e.g., fuel efficiency, cargo capacity).
+*                Create an abstract class Vehicle with pure virtual functions for specific features and behaviors, and then create concrete subclasses for each type of vehicle.
+*/
+
 #include <iostream>
 using namespace std;
 
