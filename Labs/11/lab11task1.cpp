@@ -1,3 +1,10 @@
+/*
+*   Programmer: Ibrahim Johar Farooqi (23K-0074)
+*   Date: 29 April 2024
+*   Description: Your task is to create a C++ program that facilitates unit conversions commonly used in the lab. The program should be able to convert between
+*                different units such as liters to gallons and Fahrenheit to Celsius.
+*/
+
 #include <iostream>
 using namespace std;
 
